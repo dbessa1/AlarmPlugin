@@ -1,5 +1,6 @@
 package com.uniclau.alarmplugin;
 
+import de.appplant.cordova.plugin.background;
 import android.app.KeyguardManager;
 import android.app.KeyguardManager.KeyguardLock;
 import android.content.BroadcastReceiver;
