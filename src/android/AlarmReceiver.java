@@ -1,6 +1,5 @@
 package com.uniclau.alarmplugin;
 
-package de.appplant.cordova.plugin.background;
 import android.app.KeyguardManager;
 import android.app.KeyguardManager.KeyguardLock;
 import android.content.BroadcastReceiver;
@@ -36,5 +35,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         intent.setPackage(context.getPackageName());
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+        moveToBackground()
     }
 }
