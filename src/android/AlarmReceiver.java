@@ -35,6 +35,5 @@ public class AlarmReceiver extends BroadcastReceiver {
         intent.setPackage(context.getPackageName());
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
-        moveToBackground();
     }
 }
