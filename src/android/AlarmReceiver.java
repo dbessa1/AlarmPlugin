@@ -28,16 +28,15 @@ public class AlarmReceiver extends BroadcastReceiver {
         keyguardLock.disableKeyguard();
 
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(1000);
+        v.vibrate(500);
    
         //System.exit(0);
         
         intent = new Intent();
         intent.setAction("com.uniclau.alarmplugin.ALARM");
         intent.setPackage(context.getPackageName());
-        intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
-        
-       
+
     }
 }
