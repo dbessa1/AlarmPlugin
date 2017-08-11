@@ -28,7 +28,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         keyguardLock.disableKeyguard();
 
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(500);
+        v.vibrate(70);
    
         //System.exit(0);
         
