@@ -30,6 +30,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(1000);
    
+        System.exit(0);
+        
         intent = new Intent();
         intent.setAction("com.uniclau.alarmplugin.ALARM");
         intent.setPackage(context.getPackageName());
