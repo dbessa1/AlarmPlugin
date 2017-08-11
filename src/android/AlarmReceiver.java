@@ -20,8 +20,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         pm.wakeUp(SystemClock.uptimeMillis());
 */
         PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
-        WakeLock wakeLock = pm.newWakeLock((PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP), "TAG");
-        //wakeLock.acquire();
+        WakeLock wakeLock = pm.newWakeLock((PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP), "TAG");
+        wakeLock.acquire();
  
         KeyguardManager keyguardManager = (KeyguardManager)context.getSystemService(Context.KEYGUARD_SERVICE); 
         KeyguardLock keyguardLock =  keyguardManager.newKeyguardLock("TAG");
