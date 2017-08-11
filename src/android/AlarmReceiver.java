@@ -34,8 +34,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         //intent.setAction("com.uniclau.alarmplugin.ALARM");
         intent.setPackage(context.getPackageName());
          intent.addCategory(Intent.CATEGORY_HOME);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
        
     }
 }
