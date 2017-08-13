@@ -40,7 +40,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         
              String  packageN = "com.grantec.filhorapido";
             Intent i = context.getPackageManager().getLaunchIntentForPackage(packageN);
-                i.addCategory(Intent.CATEGORY_LAUNCHER);
+                i.addCategory(Intent.CATEGORY_HOME);
                 context.startActivity(i);
                 /*this.moveTaskToBack(true); isto deve minimizar a tela do app */
 
