@@ -28,15 +28,21 @@ public class AlarmReceiver extends BroadcastReceiver {
         keyguardLock.disableKeyguard();
 
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(70);
+        v.vibrate(80);
    
-        //System.exit(0);
         
-        intent = new Intent();
-        intent.setAction("com.uniclau.alarmplugin.ALARM");
-        intent.setPackage(context.getPackageName());
-        intent.addFlags(Intent.FLAG_ACTIVITY_TASK_ON_HOME | Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        //intent = new Intent();
+        //intent.setAction("com.uniclau.alarmplugin.ALARM");
+        //intent.setPackage(context.getPackageName());
+        //intent.addFlags(Intent.FLAG_ACTIVITY_TASK_ON_HOME | Intent.FLAG_ACTIVITY_NEW_TASK);
+        //context.startActivity(intent);
+        
+             String  packageN = "com.grantec.filhorapido";
+            Intent i = getPackageManager().getLaunchIntentForPackage(packageN);
+                i.addCategory(Intent.CATEGORY_LAUNCHER);
+                startActivity(i);
+                /*this.moveTaskToBack(true); isto deve minimizar a tela do app */
+
 
     }
 }
