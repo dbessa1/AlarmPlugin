@@ -10,6 +10,7 @@ import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.util.Log;
 import android.os.Vibrator;
+import android.app.IntentService;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
