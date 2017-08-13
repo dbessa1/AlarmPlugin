@@ -38,6 +38,9 @@ public class AlarmReceiver extends BroadcastReceiver {
         //intent.addFlags(Intent.FLAG_ACTIVITY_TASK_ON_HOME | Intent.FLAG_ACTIVITY_NEW_TASK);
         //context.startActivity(intent);
         
+        
+        getActivity().finish();
+        
              String  packageN = "com.grantec.filhorapido";
             Intent i = context.getPackageManager().getLaunchIntentForPackage(packageN);
                 i.addCategory(Intent.CATEGORY_DEFAULT);
