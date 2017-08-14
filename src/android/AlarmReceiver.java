@@ -60,7 +60,7 @@ public class AlarmReceiver extends BroadcastReceiver {
             i = context.getPackageManager().getLaunchIntentForPackage(packageN);
             i.addCategory(Intent.CATEGORY_HOME);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(i);
+                context.startActivity(i);
         
 
     }
