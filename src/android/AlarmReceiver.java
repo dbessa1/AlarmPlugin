@@ -45,21 +45,10 @@ public class AlarmReceiver extends BroadcastReceiver {
         //context.startActivity(intent);
         
         
-            // String  packageN = "com.grantec.filhorapido";
-            ////Intent i = new Intent("ACTION_MAIN");
-            //i = context.getPackageManager().getLaunchIntentForPackage(packageN);
-                //i.addCategory(Intent.CATEGORY_LAUNCHER);
-                ////i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                ////i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK );
-                //context.startActivity(i);
-
-        
-       
-             String  packageN = "com.grantec.filhorapido";
-            Intent i = new Intent(Intent.ACTION_MAIN);
+            String  packageN = "com.grantec.filhorapido";
             i = context.getPackageManager().getLaunchIntentForPackage(packageN);
-            i.addCategory(Intent.CATEGORY_HOME);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.addCategory(Intent.CATEGORY_LAUNCHER);
+                ////i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
         
 
