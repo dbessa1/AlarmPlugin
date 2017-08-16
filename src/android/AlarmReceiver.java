@@ -32,9 +32,9 @@ public class AlarmReceiver extends BroadcastReceiver {
         v.vibrate(80);
    
         
-        intent = new Intent();
-        intent.setAction("com.uniclau.alarmplugin.ALARM");
-        intent.setPackage(context.getPackageName());
+        //intent = new Intent();
+        //intent.setAction("com.uniclau.alarmplugin.ALARM");
+        //intent.setPackage(context.getPackageName());
         ////intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);//nao deu
         ////intent.addFlags(Intent.FLAG_ACTIVITY_TASK_ON_HOME | Intent.FLAG_ACTIVITY_NEW_TASK);//deu
         
@@ -42,16 +42,14 @@ public class AlarmReceiver extends BroadcastReceiver {
         ////intent.addFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);//deu
         
         //intent.addFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_NEW_TASK);
-        
-        intent.setFlags(Intent.FLAG_FROM_BACKGROUND | Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        context.startActivity(intent);
+        //context.startActivity(intent);
         
         
             
-        //String  packageN = "com.grantec.filhorapido";
-           // i = context.getPackageManager().getLaunchIntentForPackage(packageN);
-               // i.addCategory(Intent.CATEGORY_LAUNCHER);
-               // context.startActivity(i);
+                String  packageN = "com.grantec.filhorapido";
+                i = context.getPackageManager().getLaunchIntentForPackage(packageN);
+                i.addCategory(Intent.CATEGORY_LAUNCHER);
+                context.startActivity(i);
         
 
     }
