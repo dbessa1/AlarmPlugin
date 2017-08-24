@@ -32,7 +32,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         keyguardLock.disableKeyguard();
 
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(80);
+        //v.vibrate(80);//CANCELEI A VIBRAÇÃO
    
         
         //intent = new Intent();
