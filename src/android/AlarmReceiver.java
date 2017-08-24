@@ -22,7 +22,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 */
         PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
         WakeLock wakeLock = pm.newWakeLock((PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP), "TAG");
-        //wakeLock.acquire();//CANCELEI PORQUE JA TENHO O PLUGIN PARA BACKGROUND MODE
+        wakeLock.acquire();//cancelei porque ja tenho o plugin de background(wake lock)//REATIVEI, PORQUE APESAR
+        //DE JA TER UM PLUGIN DE WAKE LOCK, ESTE SCRIPT TODO RODA ANTES DA ABERTURA DO APP QUE ACINA O PLUGIN DE WAKE LOCK, E 
+        //TALVES POR ISTO ESTE SCRIPT NECESSITE DE UMA SOLICITAÇÃO DE WAKE LOCK PARA ABRIR
+        //O APP QUANDO O CELULAR ESTÁ HIBERNANDO A MUITO TEMPO POR EXEMPLO.
  
         KeyguardManager keyguardManager = (KeyguardManager)context.getSystemService(Context.KEYGUARD_SERVICE); 
         KeyguardLock keyguardLock =  keyguardManager.newKeyguardLock("TAG");
