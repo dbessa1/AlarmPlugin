@@ -62,7 +62,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 context.startActivity(i);
         
         
-                Activity meu_app   = cordova.getActivity();
+                Activity meu_app   = i.getActivity();
                Intent launchIntent = meu_app.getIntent();
                 meu_app.moveTaskToBack(true);
 
