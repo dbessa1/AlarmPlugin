@@ -12,14 +12,6 @@ import android.util.Log;
 import android.os.Vibrator;
 import android.app.IntentService;
 
-
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
-import android.app.Activity;
-import android.content.pm.PackageManager;
-
-
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -60,11 +52,6 @@ public class AlarmReceiver extends BroadcastReceiver {
                 Intent i = context.getPackageManager().getLaunchIntentForPackage(packageN);
                 i.addCategory(Intent.CATEGORY_LAUNCHER);
                 context.startActivity(i);
-        
-        
-                Activity meu_app = context.getPackageManager().getLaunchIntentForPackage(packageN);
-                meu_app.moveTaskToBack(true);
-
         
 
     }
