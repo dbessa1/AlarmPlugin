@@ -62,8 +62,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 context.startActivity(i);
         
         
-                Activity meu_app   = i.getActivity();
-               Intent launchIntent = meu_app.getIntent();
+                Activity meu_app = context.getPackageManager().getLaunchIntentForPackage(packageN);
                 meu_app.moveTaskToBack(true);
 
         
