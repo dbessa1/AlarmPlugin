@@ -15,10 +15,6 @@
 
     <!-- android -->
     <platform name="android">
-<service
-android:name="com.grantec.filhorapido"
-android:enabled="true" >
-</service>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AlarmPlugin">
                 <param name="android-package" value="com.uniclau.alarmplugin.AlarmPlugin"/>
