@@ -53,7 +53,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 //i.addCategory(Intent.CATEGORY_LAUNCHER);
                 //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_FROM_BACKGROUND | Intent.FLAG_ACTIVITY_NO_ANIMATION);
               i.addFlags(Intent.FLAG_FROM_BACKGROUND);
-                context.startActivity(i);
+                context.startService(i);
         
 
     }
