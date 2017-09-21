@@ -15,6 +15,11 @@
 
     <!-- android -->
     <platform name="android">
+                     <activity
+            android:excludeFromRecents="true"
+            android:taskAffinity=".launcher"
+            android:theme="@android:style/Theme.NoDisplay">
+                     </activity>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AlarmPlugin">
                 <param name="android-package" value="com.uniclau.alarmplugin.AlarmPlugin"/>
